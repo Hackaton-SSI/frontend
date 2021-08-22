@@ -2,10 +2,18 @@
   <img src="../assets/uni_logo.png" alt="Logo da UNI" class="uni-logo" />
   <div class="bottom-options">
     <mat-icon class="icon">monetization_on</mat-icon>
-    <mat-icon class="icon" (click)="activeFullscreenModal('favorite')">
+    <mat-icon
+      id="favorite"
+      class="icon"
+      (click)="activeFullscreenModal('favorite')"
+    >
       favorite
     </mat-icon>
-    <mat-icon class="icon" (click)="activeFullscreenModal('notification')">
+    <mat-icon
+      id="notification"
+      class="icon"
+      (click)="activeFullscreenModal('notifications')"
+    >
       notifications_active
     </mat-icon>
     <img src="../assets/user_profile.png" alt="Imagem de perfil" />

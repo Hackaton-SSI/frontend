@@ -1,19 +1,41 @@
-.entity-card-container {
+.home-container {
   margin-bottom: 20px;
   cursor: pointer;
-}
-
-mat-card-header {
   width: 775px;
 }
 
-.mat-card-avatar {
+.modals-container {
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 90%;
+}
+
+mat-card-header {
+  width: 100%;
+}
+
+.square-image {
   width: 130px;
   height: 130px;
 
   max-width: 400px;
 
   border-radius: 25px;
+
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
+}
+
+.circle-image {
+  width: 130px;
+  height: 130px;
+
+  max-width: 400px;
+
+  border-radius: 25px;
+
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
 }
 
 .entity-infos {
@@ -28,10 +50,19 @@ mat-card-header {
     align-items: center;
 
     mat-card-title {
+      margin-top: 5px;
+    }
+
+    .favorite-title {
       font: bold 30px Ubuntu;
       color: black;
+    }
 
-      margin-top: 5px;
+    .notification-title {
+      font: 500 18px Ubuntu;
+      color: black;
+
+      margin-top: 25px;
     }
 
     img {
@@ -53,7 +84,15 @@ mat-card-header {
 
     .actions-icons {
       display: flex;
-      width: 25%;
+
+      img,
+      mat-icon {
+        margin-right: 15px;
+      }
+      mat-icon {
+        color: red;
+        font-size: 34px;
+      }
     }
 
     .favorite-entity {
@@ -85,7 +124,7 @@ mat-card-header {
 }
 
 mat-card-content {
-  max-width: 775px;
+  max-width: 500px;
   margin-top: 20px;
 
   p {

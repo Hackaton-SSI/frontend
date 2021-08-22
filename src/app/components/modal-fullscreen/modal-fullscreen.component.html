@@ -1,7 +1,15 @@
 <section class="modal-container">
   <header class="modal-title">
-    <h2>Notificações</h2>
+    <h2 *ngIf="type == 'favorite'">Favoritos</h2>
+    <h2 *ngIf="type == 'notifications'">Notificações</h2>
     <mat-icon>close</mat-icon>
   </header>
-  <app-entity-card [data]="layoutType"></app-entity-card>
+  <app-entity-card
+    *ngIf="type == 'favorite'"
+    [data]="favorites"
+  ></app-entity-card>
+  <app-entity-card
+    *ngIf="type == 'notifications'"
+    [data]="notifications"
+  ></app-entity-card>
 </section>

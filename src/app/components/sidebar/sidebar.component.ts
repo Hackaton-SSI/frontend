@@ -14,5 +14,13 @@ export class SidebarComponent implements OnInit {
 
   activeFullscreenModal(type) {
     this.layoutType.emit(type);
+
+    if (type == 'favorite') {
+      document.getElementById('favorite').style.color = '#F27272';
+      document.getElementById('notification').style.color = '#FFF';
+    } else {
+      document.getElementById('notification').style.color = '#FFCB46';
+      document.getElementById('favorite').style.color = '#FFF';
+    }
   }
 }

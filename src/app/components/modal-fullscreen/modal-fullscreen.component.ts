@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./modal-fullscreen.component.scss'],
 })
 export class ModalFullscreenComponent implements OnInit {
-  layoutType = 'favorite';
+  @Input() type;
   favorites = [
     {
       name: 'Todos Juntos',
@@ -15,17 +15,26 @@ export class ModalFullscreenComponent implements OnInit {
       isFavorited: true,
       layoutType: 'favorite',
     },
+  ];
+
+  notifications = [
     {
-      name: 'Não à fome',
-      address: 'Rua Marechal Francisco, 12 - Santa Paula, São Paulo - SP',
-      isFavorited: true,
-      layoutType: 'favorite',
+      name: 'A ação "Todos Juntos" está no ar!',
+      address: '',
+      categories: ['food', 'coat'],
+      layoutType: 'notification',
     },
     {
-      name: 'Mais fortes!',
-      address: 'Parque Chico Bento, 466 - São Gonçalo, São Paulo - SP',
-      isFavorited: true,
-      layoutType: 'favorite',
+      name: 'Venha conhecer "Viva junto" e participe dessa ação!',
+      address: '',
+      categories: ['food', 'coat', 'shelter'],
+      layoutType: 'notification',
+    },
+    {
+      name: 'A ação "Para sempre" está de volta, venha visitá-la!',
+      address: '',
+      categories: ['coat'],
+      layoutType: 'notification',
     },
   ];
 

@@ -33,10 +33,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   configureLayout(layout: string) {
-    // this.entities.forEach((entitie) => {
-    //   entitie.layoutType = layout;
-    // });
-    console.log(layout);
     this.layoutType = layout;
   }
 }

@@ -9,7 +9,7 @@ export class EntityCardComponent implements OnInit {
   @Input() data;
 
   isOpen: boolean = false;
-  isFavorited: boolean = false;
+  isFavorited: boolean = true;
 
   favoriteList = [
     {
@@ -22,9 +22,7 @@ export class EntityCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.data);
-  }
+  ngOnInit(): void {}
 
   open() {
     this.isOpen = !this.isOpen;
