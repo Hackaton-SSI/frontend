@@ -1,0 +1,148 @@
+.homepage-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px;
+
+  height: 100vh;
+  overflow-y: hidden;
+
+  background: linear-gradient(
+    252.5deg,
+    #7e6ba7 3.21%,
+    #dba4ed 69.57%,
+    #b14ac1 94.02%
+  );
+
+  ::ng-deep .mat-form-field-outline {
+    border-radius: 26px !important;
+    background-color: #f7e9e5;
+  }
+
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 26px 0 0 26px !important;
+    min-width: 26px !important;
+  }
+
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 26px 26px 0 !important;
+  }
+
+  .content {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 45px;
+
+    width: 90.7%;
+    height: 94%;
+
+    background-color: #ffffff;
+    border-radius: 30px;
+
+    .infos-container {
+      .search-bar {
+        display: flex;
+
+        position: absolute;
+        top: 45px;
+
+        mat-form-field {
+          width: 800px;
+
+          input {
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+
+          mat-icon {
+            align-items: center;
+            color: #899ff5;
+            font-size: 34px;
+            margin-right: 20px;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .search-bar + .entities-cards-container {
+        margin-top: 150px;
+      }
+    }
+  }
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px;
+
+  height: 100vh;
+  overflow-y: hidden;
+  background: linear-gradient(
+    252.5deg,
+    #7e6ba7 3.21%,
+    #dba4ed 69.57%,
+    #b14ac1 94.02%
+  );
+
+  ::ng-deep .mat-form-field-outline {
+    border-radius: 26px !important;
+    background-color: #f7e9e5;
+  }
+
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 26px 0 0 26px !important;
+    min-width: 26px !important;
+  }
+
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 26px 26px 0 !important;
+  }
+
+  .content {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-left: 45px;
+
+    width: 60%;
+    height: 94%;
+
+    background-color: #ffffff;
+    border-radius: 30px;
+
+    .infos-container {
+      .search-bar {
+        display: flex;
+
+        position: absolute;
+        top: 45px;
+
+        mat-form-field {
+          width: 515px;
+
+          input {
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+
+          mat-icon {
+            align-items: center;
+            color: #899ff5;
+            font-size: 34px;
+            margin-right: 20px;
+            margin-top: 15px;
+          }
+        }
+      }
+
+      .search-bar + .entities-cards-container {
+        margin-top: 150px;
+      }
+    }
+  }
+}

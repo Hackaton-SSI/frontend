@@ -1,0 +1,26 @@
+<section
+  [ngClass]="{
+    'homepage-container': layoutType == 'home',
+    'modal-container': layoutType == 'favorite' || layoutType == 'notifications'
+  }"
+>
+  <app-sidebar (layoutType)="configureLayout($event)"></app-sidebar>
+  <app-modal-fullscreen
+    *ngIf="layoutType != 'home'"
+    [type]="layoutType"
+  ></app-modal-fullscreen>
+  <div class="content">
+    <div class="infos-container">
+      <div class="search-bar">
+        <mat-form-field appearance="outline">
+          <input matInput type="search" value="" />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="entities-cards-container">
+        <app-entity-card [data]="entities"></app-entity-card>
+      </div>
+    </div>
+    <app-map></app-map>
+  </div>
+</section>

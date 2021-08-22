@@ -1,0 +1,73 @@
+<mat-card
+  [ngClass]="{
+    'home-container': data[0].layoutType == 'home',
+    'modals-container': data[0].layoutType != 'home'
+  }"
+  (click)="open()"
+  *ngFor="let item of data"
+>
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      [ngClass]="{
+        'square-image': item.layoutType == 'home',
+        'circle-image': item.layoutType != 'home'
+      }"
+    ></div>
+    <div class="entity-infos">
+      <div class="title-container">
+        <mat-card-title
+          [ngClass]="{
+            'favorite-title':
+              item.layoutType == 'favorite' || item.layoutType == 'home',
+            'notification-title': item.layoutType == 'notifications'
+          }"
+          >{{ item.name }}</mat-card-title
+        >
+        <img src="../../../assets/marker.png" />
+      </div>
+      <mat-card-subtitle>
+        {{ item.address }}
+      </mat-card-subtitle>
+      <div class="actions-container">
+        <div class="actions-icons">
+          <img
+            *ngIf="item.layoutType != 'favorite'"
+            src="../../../assets/food.png"
+          />
+          <img
+            *ngIf="item.layoutType != 'favorite'"
+            src="../../../assets/coat.png"
+          />
+          <img
+            *ngIf="item.layoutType != 'favorite'"
+            src="../../../assets/shelter.png"
+          />
+          <mat-icon *ngIf="item.layoutType == 'favorite'">favorite</mat-icon>
+          <img
+            *ngIf="item.layoutType == 'favorite'"
+            src="../../../assets/marker.png"
+          />
+        </div>
+        <div class="favorite-entity" *ngIf="item.layoutType == 'home'">
+          <span>{{ item.name }}</span>
+          <mat-icon id="favorite-icon" (click)="favoriteEntity()">
+            favorite
+          </mat-icon>
+        </div>
+      </div>
+    </div>
+  </mat-card-header>
+  <!-- <mat-card-content *ngIf="isOpen">
+    <p>
+      Senectus vivamus amet, pretium donec velit donec justo ut. Felis, cras
+      porttitor volutpat pulvinar non sed eu. Urna sed donec tincidunt nisi,
+      enim vitae diam, justo gravida. Nisl id quam adipiscing at sem sed.
+      Gravida faucibus imperdiet integer faucibus ut gravida mattis sed euismod.
+      Id eget hendrerit purus commodo. Dolor urna viverra sapien sit. Nulla
+      congue bibendum accumsan, ultrices adipiscing in semper viverra elit.
+      Ultricies amet magnis sit penatibus vitae sed laoreet ultricies. Gravida
+      scelerisque sit netus risus purus, risus cursus.
+    </p>
+  </mat-card-content> -->
+</mat-card>

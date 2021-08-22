@@ -1,0 +1,17 @@
+<section class="page-container">
+  <app-sidebar></app-sidebar>
+  <div class="content">
+    <div class="infos-container">
+      <div class="search-bar">
+        <mat-form-field appearance="outline">
+          <input matInput type="search" value="" />
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="entities-cards-container" *ngFor="let entity of entities">
+        <app-entity-card [data]="entities"></app-entity-card>
+      </div>
+    </div>
+    <app-map></app-map>
+  </div>
+</section>

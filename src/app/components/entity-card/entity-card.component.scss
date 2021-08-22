@@ -1,0 +1,138 @@
+.home-container {
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 775px;
+}
+
+.modals-container {
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 90%;
+}
+
+mat-card-header {
+  width: 100%;
+}
+
+.square-image {
+  width: 130px;
+  height: 130px;
+
+  max-width: 400px;
+
+  border-radius: 25px;
+
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
+}
+
+.circle-image {
+  width: 130px;
+  height: 130px;
+
+  max-width: 400px;
+
+  border-radius: 25px;
+
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
+}
+
+.entity-infos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    mat-card-title {
+      margin-top: 5px;
+    }
+
+    .favorite-title {
+      font: bold 30px Ubuntu;
+      color: black;
+    }
+
+    .notification-title {
+      font: 500 18px Ubuntu;
+      color: black;
+
+      margin-top: 25px;
+    }
+
+    img {
+      width: 19px;
+      height: 24px;
+    }
+  }
+
+  mat-card-subtitle {
+    font: bold 13px Ubuntu;
+    color: black;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+
+    .actions-icons {
+      display: flex;
+
+      img,
+      mat-icon {
+        margin-right: 15px;
+      }
+      mat-icon {
+        color: red;
+        font-size: 34px;
+      }
+    }
+
+    .favorite-entity {
+      display: flex;
+      align-items: center;
+
+      span {
+        font: italic 13px Ubuntu;
+      }
+
+      mat-icon {
+        font-size: 26px;
+        color: #f9dede;
+      }
+
+      mat-icon:hover {
+        color: red;
+      }
+
+      mat-icon + img {
+        margin-left: 25px;
+      }
+
+      span + mat-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+mat-card-content {
+  max-width: 500px;
+  margin-top: 20px;
+
+  p {
+    font: bold 14px Ubuntu;
+  }
+}
+
+.example-header-image {
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
+}
