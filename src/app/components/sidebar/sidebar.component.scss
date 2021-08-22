@@ -1,0 +1,42 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 77px;
+  height: 890px;
+
+  .uni-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 15px;
+  }
+
+  .bottom-options {
+    display: flex;
+    flex-direction: column;
+
+    .icon {
+      text-align: center;
+      font-size: 42px;
+      color: white;
+      margin: 0 0 32px 12px;
+    }
+  }
+}
+
+::ng-deep .mat-form-field-outline {
+  border-radius: 26px !important;
+  background-color: #f7e9e5;
+}
+
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 26px 0 0 26px !important;
+  min-width: 26px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 26px 26px 0 !important;
+}

@@ -1,0 +1,99 @@
+.entity-card-container {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+mat-card-header {
+  width: 775px;
+}
+
+.mat-card-avatar {
+  width: 130px;
+  height: 130px;
+
+  max-width: 400px;
+
+  border-radius: 25px;
+}
+
+.entity-infos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    mat-card-title {
+      font: bold 30px Ubuntu;
+      color: black;
+
+      margin-top: 5px;
+    }
+
+    img {
+      width: 19px;
+      height: 24px;
+    }
+  }
+
+  mat-card-subtitle {
+    font: bold 13px Ubuntu;
+    color: black;
+  }
+
+  .actions-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+
+    .actions-icons {
+      display: flex;
+      width: 25%;
+    }
+
+    .favorite-entity {
+      display: flex;
+      align-items: center;
+
+      span {
+        font: italic 13px Ubuntu;
+      }
+
+      mat-icon {
+        font-size: 26px;
+        color: #f9dede;
+      }
+
+      mat-icon:hover {
+        color: red;
+      }
+
+      mat-icon + img {
+        margin-left: 25px;
+      }
+
+      span + mat-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+mat-card-content {
+  max-width: 775px;
+  margin-top: 20px;
+
+  p {
+    font: bold 14px Ubuntu;
+  }
+}
+
+.example-header-image {
+  background-image: url("../../../assets/entity_thumb.png");
+  background-size: cover;
+}

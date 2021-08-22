@@ -1,0 +1,41 @@
+<mat-card class="entity-card-container" (click)="open()" *ngIf="data">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <div class="entity-infos">
+      <div class="title-container">
+        <mat-card-title>Todos Juntos</mat-card-title>
+        <img src="../../../assets/marker.png" />
+      </div>
+      <mat-card-subtitle>
+        Av. Carlos Ribeiro, 5670 - Boa Vista, São Paulo - SP
+      </mat-card-subtitle>
+      <div class="actions-container">
+        <div class="actions-icons">
+          <img *ngIf="data == 'home'" src="../../../assets/food.png" />
+          <img *ngIf="data == 'home'" src="../../../assets/coat.png" />
+          <img *ngIf="data == 'home'" src="../../../assets/shelter.png" />
+          <mat-icon *ngIf="data == 'favorite'">favorite</mat-icon>
+          <img *ngIf="data == 'favorite'" src="../../../assets/marker.png" />
+        </div>
+        <div class="favorite-entity">
+          <span>Todos Juntos</span>
+          <mat-icon id="favorite-icon" (click)="favoriteEntity()">
+            favorite
+          </mat-icon>
+        </div>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content *ngIf="isOpen">
+    <p>
+      Senectus vivamus amet, pretium donec velit donec justo ut. Felis, cras
+      porttitor volutpat pulvinar non sed eu. Urna sed donec tincidunt nisi,
+      enim vitae diam, justo gravida. Nisl id quam adipiscing at sem sed.
+      Gravida faucibus imperdiet integer faucibus ut gravida mattis sed euismod.
+      Id eget hendrerit purus commodo. Dolor urna viverra sapien sit. Nulla
+      congue bibendum accumsan, ultrices adipiscing in semper viverra elit.
+      Ultricies amet magnis sit penatibus vitae sed laoreet ultricies. Gravida
+      scelerisque sit netus risus purus, risus cursus.
+    </p>
+  </mat-card-content>
+</mat-card>

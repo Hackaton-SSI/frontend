@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-left: 45px;
+
+  width: 80%;
+  height: 94%;
+
+  background-color: #ffffff;
+  border-radius: 30px;
+
+  .infos-container {
+    .search-bar {
+      display: flex;
+
+      position: absolute;
+      top: 45px;
+
+      mat-form-field {
+        width: 800px;
+
+        input {
+          margin-bottom: 10px;
+          font-size: 20px;
+        }
+
+        mat-icon {
+          align-items: center;
+          color: #899ff5;
+          font-size: 34px;
+          margin-right: 20px;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .search-bar + .entities-cards-container {
+      margin-top: 150px;
+    }
+  }
+}
